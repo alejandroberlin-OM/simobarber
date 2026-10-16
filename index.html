@@ -217,7 +217,7 @@
   </section>
 </main>
 
-<footer>© <span id="yr"></span> Simo Barber · 1027 Finch Ave W, North York · 416-652-3697</footer>
+<footer>© <span id="yr"></span> Simo Barber · 1027 Finch Ave W, North York · (416) 652-3697</footer>
 <a class="btn stickybook book" href="#">Book now →</a>
 
 <script>
@@ -228,9 +228,10 @@ const SITE = {
   cashDiscount: 5,                                   // $ off when paying cash
   bookingUrl: "https://app.squareup.com/appointments/book/gzj3aniqhc8bsw/LAVXAR868NXZP/start",
 
+  shop:    "416 Blends",                            // the barbershop he's in
   address: "1027 Finch Ave W, North York, ON M3J 2C7",
-  findMe:  "Inside 416 Blends. Ask for Simo.",
-  phone:   "416-652-3697",
+  findMe:  "Walk into 416 Blends and ask for Simo.",
+  phone:   "(416) 652-3697",
   email:   "selrhrib@gmail.com",                   // leave "" to hide
   instagram: "",                                    // e.g. "simohaircuts"  (no @, leave "" to hide)
 
@@ -277,12 +278,12 @@ const today = new Date().toLocaleDateString("en-CA", { weekday: "long", timeZone
 document.getElementById("hours").innerHTML = Object.entries(SITE.hours).map(([d, h]) =>
   `<li class="${d === today ? "today" : ""}"><span>${d}${d === today ? " · today" : ""}</span><span>${h ? fmt(h[0]) + " – " + fmt(h[1]) : "Closed"}</span></li>`).join("");
 
-document.getElementById("address").textContent = SITE.address;
+document.getElementById("address").innerHTML = `<span style="color:var(--gold);font-family:'Bebas Neue',Impact,sans-serif;font-size:30px;letter-spacing:.04em">${SITE.shop}</span><br>${SITE.address}`;
 document.getElementById("findme").textContent = SITE.findMe;
-document.getElementById("map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.address) + "&output=embed";
+document.getElementById("map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.shop + ", " + SITE.address) + "&output=embed";
 
 const links = [];
-links.push(`<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address)}" target="_blank" rel="noopener">📍 Directions</a>`);
+links.push(`<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.shop + ", " + SITE.address)}" target="_blank" rel="noopener">📍 Directions</a>`);
 if (SITE.phone) links.push(`<a href="tel:${SITE.phone.replace(/[^\d+]/g, "")}">📞 ${SITE.phone}</a>`);
 if (SITE.email) links.push(`<a href="mailto:${SITE.email}">✉️ Email</a>`);
 if (SITE.instagram) links.push(`<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener">📸 @${SITE.instagram}</a>`);
