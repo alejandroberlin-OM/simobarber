@@ -237,6 +237,7 @@ const SITE = {
     Sunday:    ["08:00", "17:30"],
   },
 
+  // Each service can get its own booking link: add  url: "https://..."  to it.
   services: [
     { name: "Men's Haircut",        mins: 30, price: 45, img: "mens_haircut",       desc: "Classic cut, styled your way." },
     { name: "Haircut + Beard",      mins: 60, price: 60, img: "haircut_plus_beard", desc: "The full refresh, head to chin." },
@@ -254,12 +255,12 @@ document.querySelectorAll(".book").forEach(a => { a.href = SITE.bookingUrl; a.ta
 const grid = document.getElementById("grid");
 grid.innerHTML = SITE.services.map(s => `
   <article class="card">
-    <img src="img/${s.img}.jpg" alt="${s.name}" loading="lazy" width="600" height="600">
+    <a href="${s.url || SITE.bookingUrl}" target="_blank" rel="noopener" aria-label="Book ${s.name}"><img src="img/${s.img}.jpg" alt="${s.name}" loading="lazy" width="600" height="600"></a>
     <div class="body">
       <h3>${s.name}</h3>
       <p style="font-size:14px;opacity:.75">${s.desc}</p>
       <div class="meta"><span class="price">$${s.price}</span><span class="dur">${s.mins} min</span></div>
-      <a class="btn small" href="${SITE.bookingUrl}" target="_blank" rel="noopener">Book</a>
+      <a class="btn small" href="${s.url || SITE.bookingUrl}" target="_blank" rel="noopener">Book</a>
     </div>
   </article>`).join("");
 
