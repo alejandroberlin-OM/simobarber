@@ -83,7 +83,8 @@
   .card h3{font-size:18px}
   .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding-top:8px}
   .price{font-family:"Bebas Neue";font-size:34px;color:var(--terra)}
-  .dur{font-size:14px;opacity:.65}
+  .dur{font-size:14px;opacity:.65;white-space:nowrap}
+  .cash{display:inline-block;margin-left:8px;background:var(--emerald);color:#fff;font-weight:700;font-size:13px;padding:3px 9px;border-radius:999px;transform:rotate(-3deg);vertical-align:6px;white-space:nowrap}
   .card .btn{justify-content:center;margin-top:10px}
 
   /* info */
@@ -118,6 +119,7 @@
     .card h3{font-size:15px}
     .card .body p{display:none}
     .price{font-size:28px}
+    .cash{display:block;width:fit-content;font-size:11px;padding:2px 8px;margin:2px 0 0;vertical-align:0}
     header .btn{display:none}
     .stickybook{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:20;justify-content:center;font-size:17px;padding:16px}
     footer{padding-bottom:100px}
@@ -218,6 +220,7 @@
    EDIT EVERYTHING HERE — no need to touch the rest of the page
    ================================================================ */
 const SITE = {
+  cashDiscount: 5,                                   // $ off when paying cash
   bookingUrl: "https://app.squareup.com/appointments/book/gzj3aniqhc8bsw/LAVXAR868NXZP/start",
 
   address: "1027 Finch Ave W, North York, ON M3J 2C7",
@@ -259,7 +262,7 @@ grid.innerHTML = SITE.services.map(s => `
     <div class="body">
       <h3>${s.name}</h3>
       <p style="font-size:14px;opacity:.75">${s.desc}</p>
-      <div class="meta"><span class="price">$${s.price}</span><span class="dur">${s.mins} min</span></div>
+      <div class="meta"><span><span class="price">$${s.price}</span><span class="cash">$${s.price - SITE.cashDiscount} cash</span></span><span class="dur">${s.mins} min</span></div>
       <a class="btn small" href="${s.url || SITE.bookingUrl}" target="_blank" rel="noopener">Book</a>
     </div>
   </article>`).join("");
