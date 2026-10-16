@@ -217,7 +217,7 @@
   </section>
 </main>
 
-<footer>© <span id="yr"></span> Simo Barber · 1027 Finch Ave W, North York · (416) 652-3697</footer>
+<footer>Simo Barber · <a href="tel:4166523697">(416) 652-3697</a> · <a href="mailto:selrhrib@gmail.com">selrhrib@gmail.com</a></footer>
 <a class="btn stickybook book" href="#">Book now →</a>
 
 <script>
@@ -288,7 +288,7 @@ if (SITE.phone) links.push(`<a href="tel:${SITE.phone.replace(/[^\d+]/g, "")}">�
 if (SITE.email) links.push(`<a href="mailto:${SITE.email}">✉️ Email</a>`);
 if (SITE.instagram) links.push(`<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener">📸 @${SITE.instagram}</a>`);
 document.getElementById("links").innerHTML = links.join("");
-document.getElementById("yr").textContent = new Date().getFullYear();
+
 </script>
 </body>
 </html>
