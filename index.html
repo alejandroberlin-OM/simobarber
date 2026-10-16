@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simo Haircuts · Toronto Barber</title>
+<title>Simo Haircuts · North York Barber</title>
 <meta name="description" content="Fades, beards and hot towel shaves by Simo. Book your next cut online in 30 seconds.">
 <meta property="og:title" content="Simo Haircuts">
 <meta property="og:description" content="Fades, beards and hot towel shaves. Book online in 30 seconds.">
-<meta property="og:image" content="https://simobarber.ca/img/mens_haircut.jpg">
+<meta property="og:image" content="https://simobarber.ca/img/simo.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2313233F'/%3E%3Cpolygon fill='%23E0A93B' points='50,10 61,27 81,22 76,42 92,54 73,62 76,82 56,76 44,92 36,73 16,74 22,55 8,42 27,36 26,16 44,24'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,11 +50,20 @@
   .arch{position:relative;aspect-ratio:3/4;max-width:380px;justify-self:center;width:100%;
         border-radius:50% 50% 14px 14px / 34% 34% 14px 14px;background:var(--zellige);background-size:46px;
         padding:14px;box-shadow:0 0 0 6px var(--terra),0 0 0 10px var(--gold),0 30px 60px rgba(0,0,0,.4)}
-  .arch-inner{height:100%;border-radius:50% 50% 8px 8px / 34% 34% 8px 8px;background:var(--night);
+  .arch-inner{height:100%;border-radius:50% 50% 8px 8px / 34% 34% 8px 8px;background:var(--night);overflow:hidden;position:relative;
         display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:10px}
   .arch-inner .big{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(34px,4.4vw,58px);white-space:nowrap;color:var(--gold);line-height:1}
   .arch-inner small{letter-spacing:.25em;font-size:12px;text-transform:uppercase;opacity:.8}
-  .star{width:56px;height:56px}
+  .portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .tag{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%) rotate(-3deg);background:var(--gold);color:var(--night);
+       padding:8px 20px 6px;border-radius:12px;text-align:center;box-shadow:0 6px 0 #a97a20;white-space:nowrap}
+  .tag small{display:block;font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:700}
+  .tag span{font-family:"Bebas Neue",Impact,sans-serif;font-size:34px;letter-spacing:.04em;line-height:1}
+
+  /* payments */
+  .pay{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin:-12px auto 36px}
+  .chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--night);border-radius:999px;padding:7px 16px;font-weight:700;font-size:14px}
+  .cashdeal{background:var(--emerald);color:#fff;border-color:var(--emerald);transform:rotate(-2deg);box-shadow:0 4px 0 #13513d}
 
   /* sections */
   section{padding:76px 0}
@@ -102,8 +111,8 @@
   .stickybook{display:none}
   @media (max-width:760px){
     .hero .wrap,.info{grid-template-columns:1fr}
-    .arch{max-width:260px;order:-1}
-    .arch-inner .big{font-size:34px}
+    .arch{max-width:250px;order:-1;margin-bottom:30px}
+    .tag span{font-size:26px}
     .grid{grid-template-columns:1fr 1fr;gap:12px}
     .card .body{padding:12px}
     .card h3{font-size:15px}
@@ -132,7 +141,7 @@
   <div class="hero">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Marhaba · Welcome</div>
+        <div class="eyebrow">North York · Inside 416 Blends</div>
         <h1>Fresh cuts.<br><span>Zero wait.</span></h1>
         <p>Fades, beards and hot towel shaves by Simo. Pick your time online in about 30 seconds.</p>
         <div class="ctas">
@@ -142,11 +151,9 @@
       </div>
       <div class="arch">
         <div class="arch-inner">
-          <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#1F7A5C" points="90,50 79.2,59.3 78.3,78.3 59.3,79.2 50,90 40.7,79.2 21.7,78.3 20.8,59.3 10,50 20.8,40.7 21.7,21.7 40.7,20.8 50,10 59.3,20.8 78.3,21.7 79.2,40.7"/><polygon fill="#E0A93B" points="70.3,58.4 62.4,62.4 58.4,70.3 50,72 41.6,70.3 37.6,62.4 29.7,58.4 28,50 29.7,41.6 37.6,37.6 41.6,29.7 50,28 58.4,29.7 62.4,37.6 70.3,41.6 72,50"/></svg>
-          <small>Book online at</small>
-          <div class="big">simobarber.ca</div>
-          <small>Fades · Beards · Shaves</small>
+          <img class="portrait" src="img/simo.jpg" alt="Simo, your barber" width="900" height="1200">
         </div>
+        <div class="tag"><small>Book online</small><span>simobarber.ca</span></div></div>
       </div>
     </div>
   </div>
@@ -159,6 +166,10 @@
         <div class="eyebrow">The menu</div>
         <h2>Services &amp; prices</h2>
         <p>Prices in CAD. Tap any service to book it.</p>
+      </div>
+      <div class="pay">
+        <span class="chip">💳 Credit</span><span class="chip">🏧 Debit</span><span class="chip">💵 Cash</span>
+        <span class="chip cashdeal">Pay cash, save $5!</span>
       </div>
       <div class="grid" id="grid"></div>
     </div>
@@ -176,7 +187,7 @@
         <div class="panel">
           <h3>Hours</h3>
           <ul class="hours" id="hours"></ul>
-          <p style="margin-top:14px;opacity:.75;font-size:14px">Walk-ins welcome when there's a free chair. Booking guarantees your spot.</p>
+          <p style="margin-top:14px;opacity:.75;font-size:14px">Walk-ins welcome when there's a free chair. Booking guarantees your spot.<br>💳 Credit · Debit · 💵 Cash (cash saves $5)</p>
         </div>
         <div class="panel">
           <h3>Find me</h3>
@@ -193,13 +204,13 @@
     <div class="inner">
       <div class="eyebrow">Yalla!</div>
       <h2>Your next cut is<br>30 seconds away</h2>
-      <p>Pick a service, pick a time, done. You'll get a text reminder before your appointment.</p>
+      <p>Pick a service, pick a time, done. You'll get a text reminder before your appointment. Credit, debit or cash, and cash saves you $5.</p>
       <a class="btn gold book" href="#">Book with Simo →</a>
     </div>
   </section>
 </main>
 
-<footer>© <span id="yr"></span> Simo Haircuts · Toronto</footer>
+<footer>© <span id="yr"></span> Simo Haircuts · 1027 Finch Ave W, North York · 416-652-3697</footer>
 <a class="btn stickybook book" href="#">Book now →</a>
 
 <script>
@@ -209,20 +220,21 @@
 const SITE = {
   bookingUrl: "https://app.squareup.com/appointments/book/gzj3aniqhc8bsw/LAVXAR868NXZP/start",
 
-  address: "[SHOP ADDRESS], Toronto, ON",          // e.g. "123 Queen St W, Toronto, ON"
-  findMe:  "[How to find him — e.g. inside XYZ Barbershop, chair 3]",
-  phone:   "",                                      // e.g. "416-555-0123"  (leave "" to hide)
+  address: "1027 Finch Ave W, North York, ON M3J 2C7",
+  findMe:  "Inside 416 Blends. Ask for Simo.",
+  phone:   "416-652-3697",
+  email:   "selrhrib@gmail.com",                   // leave "" to hide
   instagram: "",                                    // e.g. "simohaircuts"  (no @, leave "" to hide)
 
-  // PLACEHOLDER HOURS — replace with his real hours. 24h times; null = closed
+  // 24h times; null = closed
   hours: {
     Monday:    null,
-    Tuesday:   ["10:00", "19:00"],
-    Wednesday: ["10:00", "19:00"],
-    Thursday:  ["10:00", "19:00"],
-    Friday:    ["10:00", "20:00"],
-    Saturday:  ["09:00", "18:00"],
-    Sunday:    null,
+    Tuesday:   null,
+    Wednesday: ["08:00", "18:00"],
+    Thursday:  ["08:00", "18:00"],
+    Friday:    ["08:00", "18:00"],
+    Saturday:  ["08:00", "17:30"],
+    Sunday:    ["08:00", "17:30"],
   },
 
   services: [
@@ -263,6 +275,7 @@ document.getElementById("map").src = "https://www.google.com/maps?q=" + encodeUR
 const links = [];
 links.push(`<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address)}" target="_blank" rel="noopener">📍 Directions</a>`);
 if (SITE.phone) links.push(`<a href="tel:${SITE.phone.replace(/[^\d+]/g, "")}">📞 ${SITE.phone}</a>`);
+if (SITE.email) links.push(`<a href="mailto:${SITE.email}">✉️ Email</a>`);
 if (SITE.instagram) links.push(`<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener">📸 @${SITE.instagram}</a>`);
 document.getElementById("links").innerHTML = links.join("");
 document.getElementById("yr").textContent = new Date().getFullYear();
