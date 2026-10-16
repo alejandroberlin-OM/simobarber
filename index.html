@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simo Haircuts · Toronto Barber</title>
+<meta name="description" content="Fades, beards and hot towel shaves by Simo. Book your next cut online in 30 seconds.">
+<meta property="og:title" content="Simo Haircuts">
+<meta property="og:description" content="Fades, beards and hot towel shaves. Book online in 30 seconds.">
+<meta property="og:image" content="https://simobarber.ca/img/mens_haircut.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2313233F'/%3E%3Cpolygon fill='%23E0A93B' points='50,10 61,27 81,22 76,42 92,54 73,62 76,82 56,76 44,92 36,73 16,74 22,55 8,42 27,36 26,16 44,24'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --night:#13233F; --night-2:#1C3157; --cream:#F6ECD6; --terra:#C8553D;
+    --emerald:#1F7A5C; --gold:#E0A93B; --maj:#2E6DB4; --ink:#141414;
+    --zellige:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F6ECD6'/%3E%3Cpolygon fill='%23C8553D' points='90,50 79.2,59.3 78.3,78.3 59.3,79.2 50,90 40.7,79.2 21.7,78.3 20.8,59.3 10,50 20.8,40.7 21.7,21.7 40.7,20.8 50,10 59.3,20.8 78.3,21.7 79.2,40.7'/%3E%3Cpolygon fill='%23E0A93B' points='70.3,58.4 62.4,62.4 58.4,70.3 50,72 41.6,70.3 37.6,62.4 29.7,58.4 28,50 29.7,41.6 37.6,37.6 41.6,29.7 50,28 58.4,29.7 62.4,37.6 70.3,41.6 72,50'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%2313233F'/%3E%3Cpolygon fill='%231F7A5C' points='0,-16 16,0 0,16 -16,0'/%3E%3Cpolygon fill='%231F7A5C' points='100,-16 116,0 100,16 84,0'/%3E%3Cpolygon fill='%231F7A5C' points='0,84 16,100 0,116 -16,100'/%3E%3Cpolygon fill='%231F7A5C' points='100,84 116,100 100,116 84,100'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"DM Sans",system-ui,sans-serif;background:var(--night);color:var(--cream);line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .band{height:22px;background:var(--zellige);background-size:22px 22px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  h1,h2,.display{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.04em;line-height:.95}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(19,35,63,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(224,169,59,.25)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:"Bebas Neue";font-size:28px;letter-spacing:.08em;text-decoration:none;display:flex;align-items:center;gap:10px}
+  .logo svg{width:26px;height:26px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;
+       padding:12px 22px;border-radius:999px;transition:transform .15s,background .15s;box-shadow:0 4px 0 #8e3626}
+  .btn:hover{transform:translateY(-2px);background:#d9624a}
+  .btn:active{transform:translateY(2px);box-shadow:0 1px 0 #8e3626}
+  .btn.small{padding:9px 16px;font-size:14px}
+  .btn.gold{background:var(--gold);color:var(--night);box-shadow:0 4px 0 #a97a20}
+
+  /* hero */
+  .hero{padding:56px 0 72px;background:radial-gradient(circle at 50% 0%,var(--night-2),var(--night) 70%)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .eyebrow{color:var(--gold);font-weight:700;letter-spacing:.3em;font-size:13px;text-transform:uppercase}
+  .hero h1{font-size:clamp(64px,11vw,128px);margin:12px 0 18px}
+  .hero h1 span{color:var(--gold)}
+  .hero p{font-size:19px;max-width:440px;opacity:.9;margin-bottom:28px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero .ghost{color:var(--cream);font-weight:700;text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:2px}
+  .arch{position:relative;aspect-ratio:3/4;max-width:380px;justify-self:center;width:100%;
+        border-radius:50% 50% 14px 14px / 34% 34% 14px 14px;background:var(--zellige);background-size:46px;
+        padding:14px;box-shadow:0 0 0 6px var(--terra),0 0 0 10px var(--gold),0 30px 60px rgba(0,0,0,.4)}
+  .arch-inner{height:100%;border-radius:50% 50% 8px 8px / 34% 34% 8px 8px;background:var(--night);
+        display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:10px}
+  .arch-inner .big{font-family:"Bebas Neue",Impact,sans-serif;font-size:clamp(34px,4.4vw,58px);white-space:nowrap;color:var(--gold);line-height:1}
+  .arch-inner small{letter-spacing:.25em;font-size:12px;text-transform:uppercase;opacity:.8}
+  .star{width:56px;height:56px}
+
+  /* sections */
+  section{padding:76px 0}
+  .head{text-align:center;margin-bottom:40px}
+  .head h2{font-size:clamp(46px,7vw,72px)}
+  .head p{opacity:.8;margin-top:8px}
+  .light{background:var(--cream);color:var(--night)}
+  .light .eyebrow{color:var(--terra)}
+
+  /* services */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:20px}
+  .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 2px 0 rgba(19,35,63,.08),0 12px 30px rgba(19,35,63,.08);
+        display:flex;flex-direction:column;transition:transform .2s}
+  .card:hover{transform:translateY(-4px) rotate(-.4deg)}
+  .card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block}
+  .card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .card h3{font-size:18px}
+  .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:auto;padding-top:8px}
+  .price{font-family:"Bebas Neue";font-size:34px;color:var(--terra)}
+  .dur{font-size:14px;opacity:.65}
+  .card .btn{justify-content:center;margin-top:10px}
+
+  /* info */
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .panel{background:var(--night-2);border:1px solid rgba(224,169,59,.3);border-radius:20px;padding:28px}
+  .panel h3{font-family:"Bebas Neue";font-size:34px;font-weight:400;letter-spacing:.04em;color:var(--gold);margin-bottom:14px}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed rgba(246,236,214,.2)}
+  .hours li:last-child{border:0}
+  .hours .today{color:var(--gold);font-weight:700}
+  .map{margin-top:16px;border-radius:14px;overflow:hidden;aspect-ratio:16/10;border:0;width:100%}
+  .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+  .links a{text-decoration:none;border:1px solid rgba(246,236,214,.35);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:500}
+  .links a:hover{border-color:var(--gold);color:var(--gold)}
+
+  /* final cta */
+  .final{text-align:center;background:var(--zellige);background-size:60px;padding:0}
+  .final .inner{background:var(--night);margin:0 auto;max-width:720px;padding:56px 28px;border-radius:0 0 50% 50%/0 0 22% 22%}
+  .final h2{font-size:clamp(48px,8vw,84px);margin-bottom:16px}
+  .final p{opacity:.85;margin-bottom:26px}
+
+  footer{text-align:center;padding:34px 20px;font-size:14px;opacity:.7}
+
+  /* mobile sticky book */
+  .stickybook{display:none}
+  @media (max-width:760px){
+    .hero .wrap,.info{grid-template-columns:1fr}
+    .arch{max-width:260px;order:-1}
+    .arch-inner .big{font-size:34px}
+    .grid{grid-template-columns:1fr 1fr;gap:12px}
+    .card .body{padding:12px}
+    .card h3{font-size:15px}
+    .card .body p{display:none}
+    .price{font-size:28px}
+    header .btn{display:none}
+    .stickybook{display:flex;position:fixed;left:16px;right:16px;bottom:16px;z-index:20;justify-content:center;font-size:17px;padding:16px}
+    footer{padding-bottom:100px}
+  }
+</style>
+</head>
+<body>
+
+<div class="band"></div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#E0A93B" points="90,50 79.2,59.3 78.3,78.3 59.3,79.2 50,90 40.7,79.2 21.7,78.3 20.8,59.3 10,50 20.8,40.7 21.7,21.7 40.7,20.8 50,10 59.3,20.8 78.3,21.7 79.2,40.7"/><circle cx="50" cy="50" r="12" fill="#13233F"/></svg>
+      SIMO HAIRCUTS
+    </a>
+    <a class="btn small book" href="#">Book now</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Marhaba · Welcome</div>
+        <h1>Fresh cuts.<br><span>Zero wait.</span></h1>
+        <p>Fades, beards and hot towel shaves by Simo. Pick your time online in about 30 seconds.</p>
+        <div class="ctas">
+          <a class="btn book" href="#">Book your cut →</a>
+          <a class="ghost" href="#services">See services &amp; prices</a>
+        </div>
+      </div>
+      <div class="arch">
+        <div class="arch-inner">
+          <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><polygon fill="#1F7A5C" points="90,50 79.2,59.3 78.3,78.3 59.3,79.2 50,90 40.7,79.2 21.7,78.3 20.8,59.3 10,50 20.8,40.7 21.7,21.7 40.7,20.8 50,10 59.3,20.8 78.3,21.7 79.2,40.7"/><polygon fill="#E0A93B" points="70.3,58.4 62.4,62.4 58.4,70.3 50,72 41.6,70.3 37.6,62.4 29.7,58.4 28,50 29.7,41.6 37.6,37.6 41.6,29.7 50,28 58.4,29.7 62.4,37.6 70.3,41.6 72,50"/></svg>
+          <small>Book online at</small>
+          <div class="big">simobarber.ca</div>
+          <small>Fades · Beards · Shaves</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band"></div>
+
+  <section class="light" id="services">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">The menu</div>
+        <h2>Services &amp; prices</h2>
+        <p>Prices in CAD. Tap any service to book it.</p>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <div class="band"></div>
+
+  <section id="visit">
+    <div class="wrap">
+      <div class="head">
+        <div class="eyebrow">Come through</div>
+        <h2>Hours &amp; location</h2>
+      </div>
+      <div class="info">
+        <div class="panel">
+          <h3>Hours</h3>
+          <ul class="hours" id="hours"></ul>
+          <p style="margin-top:14px;opacity:.75;font-size:14px">Walk-ins welcome when there's a free chair. Booking guarantees your spot.</p>
+        </div>
+        <div class="panel">
+          <h3>Find me</h3>
+          <p id="address" style="font-size:18px;font-weight:500"></p>
+          <p id="findme" style="opacity:.75;margin-top:4px"></p>
+          <iframe class="map" id="map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+          <div class="links" id="links"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="inner">
+      <div class="eyebrow">Yalla!</div>
+      <h2>Your next cut is<br>30 seconds away</h2>
+      <p>Pick a service, pick a time, done. You'll get a text reminder before your appointment.</p>
+      <a class="btn gold book" href="#">Book with Simo →</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Simo Haircuts · Toronto</footer>
+<a class="btn stickybook book" href="#">Book now →</a>
+
+<script>
+/* ================================================================
+   EDIT EVERYTHING HERE — no need to touch the rest of the page
+   ================================================================ */
+const SITE = {
+  bookingUrl: "https://app.squareup.com/appointments/book/gzj3aniqhc8bsw/LAVXAR868NXZP/start",
+
+  address: "[SHOP ADDRESS], Toronto, ON",          // e.g. "123 Queen St W, Toronto, ON"
+  findMe:  "[How to find him — e.g. inside XYZ Barbershop, chair 3]",
+  phone:   "",                                      // e.g. "416-555-0123"  (leave "" to hide)
+  instagram: "",                                    // e.g. "simohaircuts"  (no @, leave "" to hide)
+
+  // PLACEHOLDER HOURS — replace with his real hours. 24h times; null = closed
+  hours: {
+    Monday:    null,
+    Tuesday:   ["10:00", "19:00"],
+    Wednesday: ["10:00", "19:00"],
+    Thursday:  ["10:00", "19:00"],
+    Friday:    ["10:00", "20:00"],
+    Saturday:  ["09:00", "18:00"],
+    Sunday:    null,
+  },
+
+  services: [
+    { name: "Men's Haircut",        mins: 30, price: 45, img: "mens_haircut",       desc: "Classic cut, styled your way." },
+    { name: "Haircut + Beard",      mins: 60, price: 60, img: "haircut_plus_beard", desc: "The full refresh, head to chin." },
+    { name: "Buzz Cut",             mins: 20, price: 25, img: "buzz_cut",           desc: "One length all over. Quick and clean." },
+    { name: "Beard Trim & Line-up", mins: 20, price: 25, img: "beard_trim_lineup",  desc: "Shaped, trimmed and sharp edges." },
+    { name: "Hot Towel Shave",      mins: 30, price: 35, img: "hot_towel_shave",    desc: "Straight razor, hot towels, pure relaxation." },
+    { name: "Kids Cut (under 15)",  mins: 25, price: 35, img: "kids_cut",           desc: "Patient, fun, and looking fresh." },
+    { name: "Seniors Cut (65+)",    mins: 30, price: 35, img: "seniors_cut",        desc: "A classic cut at a friendly price." },
+  ],
+};
+/* ================================================================ */
+
+document.querySelectorAll(".book").forEach(a => { a.href = SITE.bookingUrl; a.target = "_blank"; a.rel = "noopener"; });
+
+const grid = document.getElementById("grid");
+grid.innerHTML = SITE.services.map(s => `
+  <article class="card">
+    <img src="img/${s.img}.jpg" alt="${s.name}" loading="lazy" width="600" height="600">
+    <div class="body">
+      <h3>${s.name}</h3>
+      <p style="font-size:14px;opacity:.75">${s.desc}</p>
+      <div class="meta"><span class="price">$${s.price}</span><span class="dur">${s.mins} min</span></div>
+      <a class="btn small" href="${SITE.bookingUrl}" target="_blank" rel="noopener">Book</a>
+    </div>
+  </article>`).join("");
+
+const fmt = t => { let [h, m] = t.split(":").map(Number); const ap = h >= 12 ? "pm" : "am"; h = h % 12 || 12; return m ? `${h}:${String(m).padStart(2,"0")}${ap}` : `${h}${ap}`; };
+const today = new Date().toLocaleDateString("en-CA", { weekday: "long", timeZone: "America/Toronto" });
+document.getElementById("hours").innerHTML = Object.entries(SITE.hours).map(([d, h]) =>
+  `<li class="${d === today ? "today" : ""}"><span>${d}${d === today ? " · today" : ""}</span><span>${h ? fmt(h[0]) + " – " + fmt(h[1]) : "Closed"}</span></li>`).join("");
+
+document.getElementById("address").textContent = SITE.address;
+document.getElementById("findme").textContent = SITE.findMe;
+document.getElementById("map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.address) + "&output=embed";
+
+const links = [];
+links.push(`<a href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address)}" target="_blank" rel="noopener">📍 Directions</a>`);
+if (SITE.phone) links.push(`<a href="tel:${SITE.phone.replace(/[^\d+]/g, "")}">📞 ${SITE.phone}</a>`);
+if (SITE.instagram) links.push(`<a href="https://instagram.com/${SITE.instagram}" target="_blank" rel="noopener">📸 @${SITE.instagram}</a>`);
+document.getElementById("links").innerHTML = links.join("");
+document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
