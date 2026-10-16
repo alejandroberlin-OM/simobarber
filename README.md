@@ -1,6 +1,6 @@
 # simobarber.ca
 
-One-page website for Simo Haircuts. Every "Book" button goes to his Square booking page.
+One-page website for Simo Barber. Every "Book" button goes to his Square booking page.
 
 ## Editing
 
